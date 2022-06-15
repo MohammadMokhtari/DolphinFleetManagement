@@ -5,6 +5,8 @@ import { LayoutComponent } from './layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { SidenavService } from './services/aside-service.service';
 
 @NgModule({
   declarations: [
@@ -14,5 +16,6 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent,
   ],
   imports: [CommonModule, PageRoutingModule],
+  providers: [SidenavService],
 })
 export class LayoutModule {}
