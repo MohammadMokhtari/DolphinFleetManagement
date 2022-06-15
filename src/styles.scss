@@ -1,4 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("./assets/fonts/iran_sans_mobile_light.ttf");
+}
+
+.badge {
+  display: block;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 25px;
+}
+.badge-light-succsess {
+  color: #50cd89;
+  background-color: #e8fff3;
+}
+.badge-light-danger {
+  color: #f1416c;
+  background-color: rgba(247, 55, 55, 0.822);
+}
+
+.mat-cell {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+th {
+  font-weight: bold;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: IRANSans;
+  font-size: 12px;
+}
+h1,
+h2 {
+  font-family: IRANSans;
+}
+body {
+  overflow-x: hidden;
+  a {
+    text-decoration: none !important;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none !important;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.apexcharts-canvas {
+  margin: auto !important;
+}
+
+@import "~@angular/material/theming";
+$custom-typography: mat-typography-config(
+  $font-family: "Roboto, monospace ,IRANSans",
+  $headline: mat-typography-level(12px, 48px, 700),
+  $body-1: mat-typography-level(12px, 24px, 500),
+);
+@include mat-core($custom-typography);
