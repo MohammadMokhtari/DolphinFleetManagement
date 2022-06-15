@@ -1,1 +1,32 @@
-<p>aside works!</p>
+<mat-drawer-container class="main_sidenav_container" autosize>
+  <mat-drawer #sidenav class="main_sidenav" mode="side" position="end" opened>
+
+    <ul class="aside_menu">
+      <li class="aside_menu_item active">
+        <button mat-button active>
+          <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">motorcycle</mat-icon>
+          <span> ردیاب</span>
+        </button>
+      </li>
+      <li class="aside_menu_item">
+        <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">local_shipping</mat-icon>
+        <span>برنامه ریزی</span>
+      </li>
+      <li class="aside_menu_item">
+        <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">local_convenience_store
+        </mat-icon>
+        <span> یونیت ها</span>
+      </li>
+      <li class="aside_menu_item">
+        <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">leak_remove</mat-icon>
+        <span> محدوده ها</span>
+      </li>
+      <li class="aside_menu_item">
+        <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">filter_list</mat-icon>
+        <span> کاربران</span>
+      </li>
+    </ul>
+
+  </mat-drawer>
+  <ng-content></ng-content>
+</mat-drawer-container>
