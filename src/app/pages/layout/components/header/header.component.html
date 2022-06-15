@@ -1,1 +1,18 @@
-<p>header works!</p>
+<header>
+  <mat-toolbar dir="rtl">
+    <button mat-icon-button class="example-icon" (click)="onToggleAside()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header__options">
+      <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>open_with</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>person</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>notifications_none</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</header>
