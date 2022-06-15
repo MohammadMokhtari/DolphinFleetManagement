@@ -15,7 +15,7 @@ import { SidenavService } from './services/aside-service.service';
     AsideComponent,
     HeaderComponent,
   ],
-  imports: [CommonModule, PageRoutingModule],
+  imports: [CommonModule, SharedModule, PageRoutingModule],
   providers: [SidenavService],
 })
 export class LayoutModule {}
