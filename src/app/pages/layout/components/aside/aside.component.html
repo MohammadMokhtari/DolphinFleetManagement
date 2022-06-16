@@ -2,15 +2,17 @@
   <mat-drawer #sidenav class="main_sidenav" mode="side" position="end" opened>
 
     <ul class="aside_menu">
-      <li class="aside_menu_item active">
-        <button mat-button active>
+      <li routerLink="" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="aside_menu_item">
+        <button mat-button>
           <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">motorcycle</mat-icon>
           <span> ردیاب</span>
         </button>
       </li>
-      <li class="aside_menu_item">
-        <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">local_shipping</mat-icon>
-        <span>برنامه ریزی</span>
+      <li routerLink="planning" routerLinkActive="active" class="aside_menu_item">
+        <button mat-button>
+          <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">local_shipping</mat-icon>
+          <span>برنامه ریزی</span>
+        </button>
       </li>
       <li class="aside_menu_item">
         <mat-icon class="white-icon" aria-hidden="false" aria-label="Example home icon">local_convenience_store
