@@ -1,3 +1,4 @@
+import { PlanningComponent } from './../modules/planning/planning.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,13 @@ const pageRoutes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'planning',
+        loadChildren: () =>
+          import('../modules/planning/planning.module').then(
+            (m) => m.PlanningModule
+          ),
       },
     ],
   },
