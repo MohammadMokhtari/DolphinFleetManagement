@@ -101,3 +101,13 @@ button {
 .mr-auto {
   margin-right: auto;
 }
+
+.mat-form-field-outline-end {
+  border-radius: 15px 0 0 15px !important;
+  min-width: 15px !important;
+}
+
+.mat-form-field-outline-start {
+  border-radius: 0 15px 15px 0 !important;
+  min-width: 15px !important;
+}
