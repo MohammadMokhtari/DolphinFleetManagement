@@ -5,6 +5,7 @@ import { UnitsRoutingModule } from './units-routing.module';
 import { UnitListComponent } from './components/unit-list/unit-list.component';
 import { UnitListItemComponent } from './components/unit-list/unit-list-item/unit-list-item.component';
 import { UnitMapComponent } from './components/unit-map/unit-map.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,6 @@ import { UnitMapComponent } from './components/unit-map/unit-map.component';
     UnitListItemComponent,
     UnitMapComponent,
   ],
-  imports: [CommonModule, UnitsRoutingModule],
+  imports: [CommonModule, SharedModule, UnitsRoutingModule],
 })
 export class UnitsModule {}
