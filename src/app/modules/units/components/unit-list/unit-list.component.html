@@ -1,1 +1,41 @@
-<p>unit-list works!</p>
+<section>
+  <section class="unit-lits-options">
+    <div>
+      <mat-form-field class="mx-2" appearance="outline" dir="rtl">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="جستجو">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-icon-button>
+        <mat-icon>swap_horiz</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </div>
+  </section>
+
+  <section>
+    <app-unit-list-item></app-unit-list-item>
+    <app-unit-list-item></app-unit-list-item>
+    <app-unit-list-item></app-unit-list-item>
+    <app-unit-list-item></app-unit-list-item>
+  </section>
+</section>
