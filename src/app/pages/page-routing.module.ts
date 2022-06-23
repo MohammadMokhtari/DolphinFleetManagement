@@ -20,6 +20,11 @@ const pageRoutes: Routes = [
             (m) => m.PlanningModule
           ),
       },
+      {
+        path: 'units',
+        loadChildren: () =>
+          import('../modules/units/units.module').then((m) => m.UnitsModule),
+      },
     ],
   },
 ];

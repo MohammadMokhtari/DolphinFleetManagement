@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [],
   imports: [
@@ -25,6 +27,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTableModule,
     MatPaginatorModule,
     MatTabsModule,
+    MatDividerModule,
+    MatMenuModule,
   ],
   exports: [
     MatToolbarModule,
@@ -37,6 +41,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatTableModule,
     MatPaginatorModule,
     MatTabsModule,
+    MatDividerModule,
+    MatMenuModule,
   ],
 })
 export class SharedModule {}
