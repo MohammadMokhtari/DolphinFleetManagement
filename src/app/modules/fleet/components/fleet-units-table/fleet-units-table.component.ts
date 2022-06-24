@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 export interface PeriodicElement {
   symptom: string;
@@ -60,7 +60,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class FleetUnitsTableComponent implements OnInit {
   constructor() {}
 
+  @Output() openDrawerEvent = new EventEmitter<any>();
+
   ngOnInit(): void {}
   displayedColumns: string[] = ['symptom', 'title', 'type', 'number', 'label'];
   public dataSource = ELEMENT_DATA;
+
+  openDrawer() {
+    this.openDrawerEvent.emit();
+  }
 }
