@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+
+.primary_custom {
+  border-radius: 50px;
+}
+
+img {
+  width: 20px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.paganation {
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+  align-content: flex-end;
+  height: 100%;
+}
+
+.home_sidenav-container {
+  height: 100%;
+}
+.home_sidenav {
+  padding: 20px;
+  width: 40%;
+}
+tr {
+  cursor: pointer;
+}
+
+h2 {
+  align-self: center;
+  font-size: 28px;
+}
