@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FleetComponent } from './fleet.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    FleetComponent
+  ],
   imports: [
     CommonModule
   ]
