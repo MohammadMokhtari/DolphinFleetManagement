@@ -133,46 +133,7 @@
             </div>
           </div>
 
-          <div dir="rtl">
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-              <!-- Position Column -->
-              <ng-container matColumnDef="symptom">
-                <th mat-header-cell *matHeaderCellDef> نشانه</th>
-                <td mat-cell *matCellDef="let element">
-                  <img [src]="element.symptom" alt=""> </td>
-              </ng-container>
-
-              <!-- Name Column -->
-              <ng-container matColumnDef="title">
-                <th mat-header-cell *matHeaderCellDef> عنوان </th>
-                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-              </ng-container>
-
-              <!-- Weight Column -->
-              <ng-container matColumnDef="type">
-                <th mat-header-cell *matHeaderCellDef>نوع دستگاه </th>
-                <td mat-cell *matCellDef="let element"> {{element.type}} </td>
-              </ng-container>
-
-              <!-- Symbol Column -->
-              <ng-container matColumnDef="number">
-                <th mat-header-cell *matHeaderCellDef> شماره </th>
-                <td mat-cell *matCellDef="let element"> {{element.number}} </td>
-              </ng-container>
-
-              <!-- Symbol Column -->
-              <ng-container matColumnDef="label">
-                <th mat-header-cell *matHeaderCellDef> برچسب </th>
-                <td mat-cell *matCellDef="let element">
-                  <span class="badge badge-light-danger">{{element.label}}</span></td>
-              </ng-container>
-
-
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;" mat-button (click)="drawer.open()"></tr>
-            </table>
-          </div>
+          <app-fleet-units-table></app-fleet-units-table>
         </div>
         <div class="col-md-12">
           <div class="paganation">
