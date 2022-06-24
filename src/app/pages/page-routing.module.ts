@@ -13,6 +13,11 @@ const pageRoutes: Routes = [
         component: HomeComponent,
       },
       {
+        path: 'fleet',
+        loadChildren: () =>
+          import('../modules/fleet/fleet.module').then((m) => m.FleetModule),
+      },
+      {
         path: 'planning',
         loadChildren: () =>
           import('../modules/planning/planning.module').then(
