@@ -35,6 +35,6 @@
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" mat-button (click)="drawer.open()"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" mat-button (click)="openDrawer()"></tr>
   </table>
 </div>
