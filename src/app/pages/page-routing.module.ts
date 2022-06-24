@@ -11,7 +11,6 @@ const pageRoutes: Routes = [
       {
         path: '',
         component: HomeComponent,
-        redirectTo: 'fleet',
       },
       {
         path: 'fleet',
