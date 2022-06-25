@@ -5,19 +5,14 @@
       <div class="mat-detail-close-btn">
         <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon"
           (click)="closeDrawer()">
-        <mat-icon>close</mat-icon>
-      </button>
-
-      <div id="unit-map">
-
+          <mat-icon>close</mat-icon>
+        </button>
       </div>
       <app-fleet-unit-detail-map></app-fleet-unit-detail-map>
     </div>
 
     <div class="col-md-12">
       <mat-tab-group>
-        <mat-tab label="اطلاعات یونیت">طلاعات یونیت</mat-tab>
-        <mat-tab label="Assets"> Assets </mat-tab>
         <mat-tab label="پیکربندی">
           <div class="d-flex">
             <div class="d-flex flex-grow-0 justify-content-center align-items-center m-5">
@@ -55,6 +50,8 @@
             </div>
           </div>
         </mat-tab>
+        <mat-tab label="اطلاعات یونیت">طلاعات یونیت</mat-tab>
+        <mat-tab label="Assets"> Assets </mat-tab>
       </mat-tab-group>
 
     </div>
