@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FleetSidenavService } from '../../services/fleet-sidenav.service';
 
 export interface PeriodicElement {
   symptom: string;
@@ -58,15 +59,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./fleet-units-table.component.scss'],
 })
 export class FleetUnitsTableComponent implements OnInit {
-  constructor() {}
-
-  @Output() openDrawerEvent = new EventEmitter<any>();
+  constructor(private fleetSidenaveService: FleetSidenavService) {}
 
   ngOnInit(): void {}
   displayedColumns: string[] = ['symptom', 'title', 'type', 'number', 'label'];
   public dataSource = ELEMENT_DATA;
 
   openDrawer() {
-    this.openDrawerEvent.emit();
+    this.fleetSidenaveService.open();
   }
 }
