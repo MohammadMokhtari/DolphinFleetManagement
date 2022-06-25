@@ -1,8 +1,10 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-md-12">
-      <button mat-fab aria-label="Example icon button with a bookmark icon">
+    <div class="col-md-12 position-relative">
+      <div class="mat-detail-close-btn">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a bookmark icon"
+          (click)="closeDrawer()">
         <mat-icon>close</mat-icon>
       </button>
 
