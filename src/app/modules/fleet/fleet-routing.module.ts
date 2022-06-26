@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FleetComponent } from './fleet.component';
 import { FleetUnitDetailComponent } from './components/fleet-unit-detail/fleet-unit-detail.component';
+import { UnitReolver } from './services/unit.resolver';
 
 const fleetRoutes: Routes = [
   {
@@ -12,6 +13,9 @@ const fleetRoutes: Routes = [
       {
         path: ':id',
         component: FleetUnitDetailComponent,
+        resolve: {
+          unit: UnitReolver,
+        },
       },
     ],
   },
