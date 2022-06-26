@@ -8,6 +8,8 @@ import { FleetUnitsTableComponent } from './components/fleet-units-table/fleet-u
 import { FleetUnitDetailComponent } from './components/fleet-unit-detail/fleet-unit-detail.component';
 import { FleetUnitDetailMapComponent } from './components/fleet-unit-detail/fleet-unit-detail-map/fleet-unit-detail-map.component';
 import { FleetSidenavService } from './services/fleet-sidenav.service';
+import { UnitService } from './services/unit.service';
+import { UnitReolver } from './services/unit.resolver';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,6 @@ import { FleetSidenavService } from './services/fleet-sidenav.service';
     FleetUnitDetailMapComponent,
   ],
   imports: [CommonModule, FleetRoutingModule, SharedModule],
-  providers: [FleetSidenavService],
+  providers: [FleetSidenavService, UnitService, UnitReolver],
 })
 export class FleetModule {}
