@@ -1,57 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FleetSidenavService } from '../../services/fleet-sidenav.service';
+import { Component, OnInit } from '@angular/core';
 
-export interface PeriodicElement {
-  symptom: string;
-  title: string;
-  type: string;
-  number: number;
-  label: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    symptom: 'assets/uniticon/ic_unit1.png',
-    title: 'پاتیل بر9',
-    type: 'دستگاه ایگل E200',
-    number: +94874784,
-    label: '',
-  },
-  {
-    symptom: 'assets/uniticon/ic_unit3.png',
-    title: 'پاتیل بر15',
-    type: 'دستگاه ایگل E450',
-    number: +94874784,
-    label: '',
-  },
-  {
-    symptom: 'assets/uniticon/ic_unit4.png',
-    title: 'پاتیل بر7',
-    type: 'دستگاه ایگل E21230',
-    number: +94874784,
-    label: '',
-  },
-  {
-    symptom: 'assets/uniticon/ic_unit6.png',
-    title: 'پاتیل بر5',
-    type: 'دستگاه ایگل E254',
-    number: +94874784,
-    label: 'خودرو کوره',
-  },
-  {
-    symptom: 'assets/uniticon/ic_unit5.png',
-    title: 'پاتیل بر10',
-    type: 'دستگاه ایگل E214',
-    number: +94874784,
-    label: '',
-  },
-  {
-    symptom: 'assets/uniticon/ic_unit7.png',
-    title: 'پاتیل بر4',
-    type: 'دستگاه ایگل E123',
-    number: +94874784,
-    label: '',
-  },
-];
+import { Unit } from '../../models/unit.model';
+import { FleetSidenavService } from '../../services/fleet-sidenav.service';
+import { UnitService } from '../../services/unit.service';
 
 @Component({
   selector: 'app-fleet-units-table',
@@ -59,11 +10,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./fleet-units-table.component.scss'],
 })
 export class FleetUnitsTableComponent implements OnInit {
-  constructor(private fleetSidenaveService: FleetSidenavService) {}
+  public units: Unit[];
 
-  ngOnInit(): void {}
+  constructor(
+    private fleetSidenaveService: FleetSidenavService,
+    private unitService: UnitService
+  ) {}
+
+  ngOnInit(): void {
+    this.units = this.unitService.getUnits();
+  }
+
   displayedColumns: string[] = ['symptom', 'title', 'type', 'number', 'label'];
-  public dataSource = ELEMENT_DATA;
 
   openDrawer() {
     this.fleetSidenaveService.open();
